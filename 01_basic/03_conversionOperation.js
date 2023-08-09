@@ -83,7 +83,7 @@ const text1 = "hello";
 const text2 = " world";
 const fullText = text1 + text2;
 
-// console.log(fullText);
+// console.log(fullText); //"hello world"
 
 //console.log("2" + 2);      // 22
 //console.log(2 + "2");      // 22
