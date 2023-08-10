@@ -14,7 +14,7 @@ let isLoggedIn = false;
 
 // data_type
 
-   //prmitive value
+   //primitive value
     
       //TYPE            //TYPEOF
 
@@ -26,7 +26,7 @@ let isLoggedIn = false;
       //symbol          //"symbol"     let id = Symbol('123')
       //undefined       //"undefined"  let value;
 
-   //Non prmitive value (Reference)
+   //Non primitive value (Reference)
    
       // Array
       // Object
@@ -46,3 +46,31 @@ let isLoggedIn = false;
          // array - object
          // object - object
          // function - function
+
+
+//********************Memory***********************/
+
+// Stack Memory (primitive) copy value
+
+// Heap Memory (non primitive) revrence value
+
+
+// ex- 
+   let today = "sunday"
+   let tomorrow = today
+   tomorrow = "monday"
+
+   // console.log(today);
+   // console.log(tomorrow);
+
+   let month1 = {
+      name : "january",
+      day : 31
+   }
+
+   let month2 = month1
+
+   month2.name = "february"
+
+   console.log(month1);
+   console.log(month2);
