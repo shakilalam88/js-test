@@ -1,13 +1,19 @@
-const myNums = [1, 2, 3]
+const myNums = [1, 2, 3, 4, 3, 2]
+
+const total = myNums.reduce((acc, curtVal) => {
+  return acc + curtVal
+}, 0)
+
+// console.log(total) // 15
 
 // const myTotal = myNums.reduce(function (acc, currval) {
 //     console.log(`acc: ${acc} and currval: ${currval}`);
 //     return acc + currval
 // }, 0)
 
-const myTotal = myNums.reduce((acc, curr) => acc + curr, 0)
+// const myTotal = myNums.reduce((acc, curr) => acc + curr, 0)
 
-console.log(myTotal)
+// console.log(myTotal)
 
 const shoppingCart = [
   {
@@ -28,6 +34,12 @@ const shoppingCart = [
   },
 ]
 
-const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+const cartTotal = shoppingCart.reduce((acc, curtVal) => {
+  // console.log(curtVal.price)
+  return acc + curtVal.price
+}, 0)
+console.log(cartTotal) // 22996
 
-console.log(priceToPay)
+// const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+
+// console.log(priceToPay)
