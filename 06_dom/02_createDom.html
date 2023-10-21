@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <div class="parent">
+        <div class="monday day">monday<span class="d-none"> week</span></div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">friday</div>
+    </div>
+    <script>
+        const parent = document.querySelector('.parent')
+        // console.log(parent);
+        // console.log(parent.children);  //Html collection
+        // console.log(parent.children[0].innerHTML);  // monday<span style="d-none;"> week</span>
+        // console.log(parent.children[0].innerText);  // Monday
+        // console.log(parent.children[0].textContent);  // Monday week
+
+        // for(let i=0;i<parent.children.length-1;i++){
+        //     console.log(parent.children[i].innerText);
+        // }
+
+        // console.log(parent.firstElementChild); //        <div class="monday day">monday<span class="d-none"> week</span></div>
+        // console.log(parent.lastElementChild); //  <div class="day">friday</div>
+
+        // const monday = document.querySelector('.monday')
+        // console.log(monday);   // monday full div
+        // console.log(monday.parentElement);  // parent full div
+        // console.log(monday.nextElementSibling); //  <div class="day">tuesday</div>
+
+        const div = document.createElement('div')
+        div.className = "main";
+        div.id = Math.round(Math.random()*10+1)
+        div.setAttribute("href","#")
+        // div.innerText = "hello world"
+        const addText = document.createTextNode("hello world")
+        div.appendChild(addText)
+        document.querySelector('#root').appendChild(div)
+        console.log(div);
+
+    </script>
+</body>
+</html>
