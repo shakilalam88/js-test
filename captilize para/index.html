@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #CDFADB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .row {
+            display: flex;
+            background-color: #F6FDC3;
+            padding: 20px;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        #convert {
+            display: inline;
+            width: 100px;
+            background: #FF8080;
+            padding: 10px;
+            margin: 20px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-transform: capitalize;
+            color: beige;
+            cursor: pointer;
+        }
+
+        #convert:hover {
+            background-color: #3c3c3c;
+            color: #FF8080;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <textarea id="text" name="text" rows="10"
+                cols="50">let's convert this small letter paragraph into capitalize paragraph</textarea>
+            <br>
+            <input type="submit" value="capitalize" id="convert">
+            <textarea id="capitalizeText" name="capitalizeText" rows="10" cols="50"></textarea>
+        </div>
+    </div>
+    <script>
+        const convert = document.querySelector('#convert');
+        
+        convert.addEventListener('click',()=>{
+            const textArea = document.querySelector('#text').value;
+            const capitalizeText = document.querySelector('#capitalizeText');
+            const text= capitalize(textArea)
+            capitalizeText.innerHTML = text;           
+
+        })
+        
+        function capitalize(text) {
+            let para = text.split(' ')
+            let capitalizeText = ''
+            for(let i=0; i<para.length; i++){
+                capitalizeText += para[i].charAt(0).toUpperCase()+ para[i].slice(1) + " "
+            }
+            return capitalizeText
+        }
+    </script>
+</body>
+
+</html>

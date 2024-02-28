@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #E8C872;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label {
+    cursor: pointer;
+}
+.container{
+    background-color: #FFF3CF;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: calc(100% - 50px);
+    width: 485px;
+}
+.container h1{
+    font-size: 1.3rem;
+    margin: 10px 0;
+    text-align: center;
+}
+.passBox{
+    border: 1px solid lightblue;
+    outline: none;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-block: 8px;
+    width: 100%;
+    position: relative;
+    text-overflow: ellipsis;
+    padding-right: 30px;
+    /* margin-inline: 5px; */
+}
+.inputBox{
+    position: relative;
+    margin: 10px 0;
+}
+.inputBox span{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-block: 7px;
+}
+input[type= "checkbox"]{
+    width: 18px;
+    height: 18px;
+}
+span#sliderValue {
+    font-weight: 600;
+    font-size: 16px;
+}
+.genBtn{
+    border: none;
+    outline: none;
+    background: #637A9F;
+    color: black;
+    font-size: 18px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-block: 10px;
+}
+.genBtn:hover{
+    background-color: #C9D7DD;
+}

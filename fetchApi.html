@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <button>Get Cats Facts</button>
+    <script>
+        const url = 'https://cat-fact.herokuapp.com/facts';
+        const root = document.querySelector('#root')
+        const button = document.querySelector('button')
+
+        // with async/await
+
+        // const getData = async () =>{
+        //     console.log("getting data ...");
+        //     let response = await fetch(url);
+        //     console.log(response);
+        //     let data = await response.json();
+        //     console.log(data[0].text);
+        //     root.innerText = data[0].text
+        // }
+        // button.addEventListener('click', getData)
+
+        // promise chain
+         function getFact(){
+            fetch(url)
+            .then((response)=>{
+                return response.json()
+            })
+            .then((data)=>{
+                root.innerText = data[0].text
+            })
+         }
+         button.addEventListener('click', getFact)
+    </script>
+</body>
+</html>
